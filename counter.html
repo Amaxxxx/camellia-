@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>简单计算器</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/counter.css">
+</head>
+
+<body>
+	
+	<div class="overall">
+		<div>
+			<input type="text" class="output" onfocus="this.blur();" value="0" id="result">
+			
+		</div>
+		
+		<button style="grid-area :AC " onClick="clearzero()" color:gray><b>AC</b></button>
+		<button style="grid-area :plus-minus" onClick="calToggle()">±</button>
+		<button style="grid-area :percent" onClick="calPercentage()">%</button>
+		
+		<button style="grid-area :add" onClick="append('+')">+</button>
+		<button style="grid-area :subtract" onClick="append('-')">-</button>
+		<button style="grid-area :multiply" onClick="append('×')">×</button>
+		<button style="grid-area :divide" onClick="append('÷')">÷</button>
+		<button style="grid-area :equal " onClick="equal()"><b>=</b></button>
+
+		<button style="grid-area :num-1" onClick="appendNum(1)">1</button>
+		<button style="grid-area :num-2" onClick="appendNum(2)">2</button>
+		<button style="grid-area :num-3" onClick="appendNum(3)">3</button>
+		<button style="grid-area :num-4" onClick="appendNum(4)">4</button>
+		<button style="grid-area :num-5" onClick="appendNum(5)">5</button>
+		<button style="grid-area :num-6" onClick="appendNum(6)">6</button>
+		<button style="grid-area :num-7" onClick="appendNum(7)">7</button>
+		<button style="grid-area :num-8" onClick="appendNum(8)">8</button>
+		<button style="grid-area :num-9" onClick="appendNum(9)">9</button>
+
+		<button style="grid-area :num-0" onClick="appendNum(0)">0</button>
+		
+		<button style="grid-area :dot" onClick="dot('.')">.</button>
+		
+	</div>
+	<script src="js/counter.js"></script>
+</body>

@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html charset=UTF-8">
+<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=11" id=mixia_vpid>
+<title>月上白山茶</title>
+<meta name="keywords" content="月上白山茶，月上白山茶主页，白山茶，
+			           月上，白山茶主页，月上主页，yueshangbaishancha，
+		                           月上白山茶引导页">
+<meta name="description" content="白山茶的个人主页，通往白山茶的各个站点">
+<link rel="icon" href="picture/bt.jpg">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head> 
+<!--------------------------------背景音乐-------------------->
+<audio src="bg.mp3" controls></audio>
+ <!--------------------------------背景音乐-------------------->
+
+<style>
+/*-----------------------------蝴蝶结光标--------------------------------------*/
+body{
+	cursor:url(picture/sb2.cur),auto;
+	}
+/*-----------------------------蝴蝶结光标--------------------------------------*/
+/*-------------------------背景-----------------------------------*/
+div#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  zoom: 1;
+ 
+  opacity:1;
+  transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+}
+/*-------------------------背景-----------------------------------*/
+
+/*-------------------------头像-----------------------------------*/
+ div img{
+	width:100px;
+	height:100px;
+	border-radius:50%; //圆角
+	overflow:hidden;
+	margin-top: 150px;
+	//描边
+	border:1px solid #FFF;
+    	-moz-box-shadow:0 0 3px pink;
+    	-webkit-box-shadow:0 0 3px pink;
+    	box-shadow:0 0 3px pink;
+    	padding:3px;
+	animation: rotate 10s linear infinite;
+	}
+img:hover{
+	animation-play-state: paused;
+	}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+		}
+/*-------------------------头像-----------------------------------*/
+
+/*-------------------------文字-----------------------------------*/
+	p{
+	font-size: 20px;
+	color:white;
+    	opacity:0.9;
+	font-weight:normal;
+	text-align:center;
+	margin-top: -150px;
+	text-shadow: 10px 10px 10px pink;
+	}
+/*-------------------------文字-----------------------------------*/
+
+/*-------------------------按钮-----------------------------------*/
+.btn {
+    color: white;
+    background-color: no;
+    opacity:0.8;
+    padding: 0px 1em;
+    width:10px;
+    height: 10px;
+    border: 1px solid pink;
+   border-radius:50px;
+	
+}
+.btn:hover {
+    background-color: pink;
+    opacity:0.86;
+}
+.btn:focus {
+    background-color: yellow;
+    opacity:0.86;
+}
+
+.btn:active {
+    background-color: purple;
+    opacity:0.86;
+}
+/*-------------------------按钮-----------------------------------*/
+</style>
+<div id="bg"></div>
+
+<script>
+//----------------------------------自动切换背景---------------------------
+// 定义图片路径 {num} 为 可变的图片序号
+var bgImgUrl = 'picture/bg{num}.jpg', bgNum,
+    bgImgArr = [],
+    bgDiv = document.getElementById("bg");
+// 组合数组 此处 200 为 图开始序号 结束 210
+for (var i=1; i <= 9; i++){
+    bgImgArr.push(bgImgUrl.replace('{num}', i));
+}
+setBGimg();
+function setBGimg(d){
+    if(!bgNum || bgNum >= bgImgArr.length) bgNum = 0;
+    bgDiv.style.opacity = .100;
+    setTimeout(function(){
+        bgDiv.style.backgroundImage = 'url('+ bgImgArr[bgNum] +')';
+        bgNum++;
+        bgDiv.style.opacity = 1;
+    }, 1000);
+    if(typeof d == 'undefined')
+    setInterval(function(){setBGimg(true);}, 10000);
+    // 上一行的 10000 是背景图片自动切换时间(单位 毫秒)
+}
+//----------------------------------自动切换背景---------------------------
+
+//----------------------------------樱花飘落特效---------------------------
+
+//----------------------------------樱花飘落特效---------------------------
+</script>
+
+<body>
+	<div align="center">
+	<img src="picture/tx2.jpg" alt="">
+	</div>
+	<p>白山茶的个人主页</p>
+	<div align="center" style="position:relative;top:170px;margin-left:-200px;">
+	<a href="clock.html"><botton class="btn">小时钟</button></a>
+	</div>
+	<div align="center" style="position:relative;top:170px;margin-left:-200px;">
+	<a href="counter.html"><botton class="btn">计算器</button></a>
+	</div>
+</body>
+
+</html>
